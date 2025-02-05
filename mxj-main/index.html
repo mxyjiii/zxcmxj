@@ -29,6 +29,54 @@
         <button type="button">
             <img src="images/png-transparent-computer-icons-login-login-button-miscellaneous-angle-text.png" alt="Войти" width="54" height="32">
         </button>
+        <div>
+            <!-- Форма "Войдите в профиль" -->
+            <section>
+                <button type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
+                <h2>Войдите в профиль</h2>
+                <p>Заказывать доставку могут только зарегистрированные пользователи.</p>
+                <div>
+                    <button type="button">Войти</button>
+                    <button type="button">Регистрация</button>
+                </div>
+            </section>
+            <!--/ Форма "Войдите в профиль" -->
+            <!-- Форма "Регистрация" -->
+            <section>
+                <button type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
+                <h2>Регистрация</h2>
+                <form action="/" method="post">
+                    <input type="text" name="name" placeholder="Имя" required>
+                    <input type="email" name="email" placeholder="Логин" required>
+                    <fieldset>
+                        <div>
+                            <input type="password" name="password" placeholder="Пароль" required>
+                            <span>Минимум 8 символов</span>
+                        </div>
+                        <input type="password" name="repeat-password" placeholder="Повторите пароль" required>
+                    </fieldset>
+                    <fieldset>
+                        <input type="submit" value="Зарегистрироваться">
+                        <button type="button">Отмена</button>
+                    </fieldset>
+                    <button type="button">У меня уже есть аккаунт</button>
+                </form>
+            </section>
+            <!--/ Форма "Регистрация" -->
+            <!-- Форма "Войти" -->
+            <section>
+                <button type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
+                <h2>Войти</h2>
+                <form action="/" method="post">
+                    <input type="email" name="email" placeholder="Логин" required>
+                    <input type="password" name="password" placeholder="Пароль" required>
+                    <fieldset>
+                        <input type="submit" value="Войти">
+                        <button type="button">Отмена</button>
+                    </fieldset>
+                    <button type="button">У меня еще нет аккаунта</button>
+                </form>
+            </section>
     </header>
     <!--/ Заголовок -->
     <!-- Основной контент -->
@@ -163,54 +211,6 @@
     </footer>
     <!--/ Подвал -->
     <!-- Формы -->
-    <div>
-        <!-- Форма "Войдите в профиль" -->
-        <section>
-            <button type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
-            <h2>Войдите в профиль</h2>
-            <p>Заказывать доставку могут только зарегистрированные пользователи.</p>
-            <div>
-                <button type="button">Войти</button>
-                <button type="button">Регистрация</button>
-            </div>
-        </section>
-        <!--/ Форма "Войдите в профиль" -->
-        <!-- Форма "Регистрация" -->
-        <section>
-            <button type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
-            <h2>Регистрация</h2>
-            <form action="/" method="post">
-                <input type="text" name="name" placeholder="Имя" required>
-                <input type="email" name="email" placeholder="Логин" required>
-                <fieldset>
-                    <div>
-                        <input type="password" name="password" placeholder="Пароль" required>
-                        <span>Минимум 8 символов</span>
-                    </div>
-                    <input type="password" name="repeat-password" placeholder="Повторите пароль" required>
-                </fieldset>
-                <fieldset>
-                    <input type="submit" value="Зарегистрироваться">
-                    <button type="button">Отмена</button>
-                </fieldset>
-                <button type="button">У меня уже есть аккаунт</button>
-            </form>
-        </section>
-        <!--/ Форма "Регистрация" -->
-        <!-- Форма "Войти" -->
-        <section>
-            <button type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
-            <h2>Войти</h2>
-            <form action="/" method="post">
-                <input type="email" name="email" placeholder="Логин" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <fieldset>
-                    <input type="submit" value="Войти">
-                    <button type="button">Отмена</button>
-                </fieldset>
-                <button type="button">У меня еще нет аккаунта</button>
-            </form>
-        </section>
         <!--/ Форма "Войти" -->
     </div>
     <!--/ Формы -->
