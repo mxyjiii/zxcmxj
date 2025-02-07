@@ -15,10 +15,10 @@
 
 <body>
     <!-- Заголовок -->
-    <a><h1 class="header_title" class="site title">DonutEllo</h1></a>
-    <a><h1 class="header_title">Вкуснейшие пончики в мире!</h1></a>
+    <a><h1 class="header__title" class="site title">DonutEllo</h1></a>
+    <a><h1 class="header__title">Вкуснейшие пончики в мире!</h1></a>
     <header class="header container">
-        <nav class="header_menu">
+        <nav class="header__menu">
             <ul class="menu__link">
                 <li><a href="#">Главная</a></li>
                 <li><a href="#">Пончики</a></li>
@@ -27,7 +27,7 @@
         </nav>
         <!--/ Навигация -->
         <h2>Вход в личный кабинет</h2>
-        <button class="header_button header_button--auth" type="button">
+        <button class="header__button header_button--auth" type="button">
             <img src="images/png-transparent-computer-icons-login-login-button-miscellaneous-angle-text.png" alt="Войти" width="54" height="32">
         </button>
         <div>
@@ -37,14 +37,14 @@
                 <h2>Войдите в профиль</h2>
                 <p>Заказывать доставку могут только зарегистрированные пользователи.</p>
                 <div>
-                    <button class="header_button header_button--auth" type="button">Войти</button>
-                    <button class="header_button header_button register" type="button">Регистрация</button>
+                    <button class="header__button header_button--auth" type="button">Войти</button>
+                    <button class="header__button header_button register" type="button">Регистрация</button>
                 </div>
             </section>
             <!--/ Форма "Войдите в профиль" -->
             <!-- Форма "Регистрация" -->
             <section class="register">
-                <button class="header_button header_button--close" type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
+                <button class="header__button header_button--close" type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
                 <h2>Регистрация</h2>
                 <form action="#" method="post">
                     <input type="text" name="name" placeholder="Имя" required>
@@ -58,24 +58,24 @@
                     </fieldset>
                     <fieldset>
                         <input type="submit" value="Зарегистрироваться">
-                        <button class="header_button header_button--cancel" type="button">Отмена</button>
+                        <button class="header__button header_button--cancel" type="button">Отмена</button>
                     </fieldset>
-                    <button class="header_button header_button--already_have" type="button">У меня уже есть аккаунт</button>
+                    <button class="header__button header_button--already_have" type="button">У меня уже есть аккаунт</button>
                 </form>
             </section>
             <!--/ Форма "Регистрация" -->
             <!-- Форма "Войти" -->
             <section class="auth">
-                <button class="header_button" type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
+                <button class="header__button" type="button"><img src="images/6065149.png" alt="Закрыть окно" width="35" height="35"></button>
                 <h2>Войти</h2>
                 <form action="#" method="post">
                     <input type="email" name="email" placeholder="Логин" required>
                     <input type="password" name="password" placeholder="Пароль" required>
                     <fieldset>
                         <input type="submit" value="Войти">
-                        <button class="header_button header_button--cancel" type="button">Отмена</button>
+                        <button class="header__button header_button--cancel" type="button">Отмена</button>
                     </fieldset>
-                    <button class="header_button header_button--dont_have" type="button">У меня еще нет аккаунта</button>
+                    <button class="header__button header_button--dont_have" type="button">У меня еще нет аккаунта</button>
                 </form>
             </section>
     </header>
@@ -88,8 +88,8 @@
                 <h2>Заказывай пончики в 2 клика!</h2>
                 <p>Не обязательно приходить в заведение, просто сделай заказ и мы привезём свежие пончики к тебе домой!</p>
                 <div>
-                    <button class="main_button main_button--order" type="button">Сделать заказ</button>
-                    <button class="main_button main_button--auth" type="button">Войти</button>
+                    <button class="main__button main_button--order" type="button">Сделать заказ</button>
+                    <button class="main__button main_button--auth" type="button">Войти</button>
                 </div>
             </div>
         </section>
@@ -99,25 +99,37 @@
             <h2>Умная сортировка по тегам</h2>
             <p>Добавляй их в корзину и указывай наиболее популярные теги. Это позволит быстро находить любые категории.</p>
             <ul class="menu">
+                <div class="menu__button">
                 <li>   
-                    <h3>Собери свой бокс</h3>
+                    <button class="main__button main_button--box" type="button">Собери свой бокс</button>
                     <p>Время приготвления наших блюд не более 1 часа</p>
-                    <img src="images/ponchiki-assorti-0-2-1.jpg" width="200" height="200">
+                </div>
+                <div class="menu__wrap--right">
+                    <img src="images/ponchiki-assorti-0-2-1.jpg" width="150" height="150">
+                </div>
                 </li>
                 <li>
-                    <h3>Акции</h3>
+                    <div class="menu__button">
+                    <button class="main__button main_button--sale" type="button">Акции</button>
                     <p>Самые вкусные блюда которые можно детям любого возраста</p>
-                    <img src="images/ponchik deti.jpg" width="200" height="200">
+                    </div>
+                    <div class="menu__wrap--right">
+                    <img src="images/ponchik deti.jpg" width="150" height="150">
+                    </div>
                 </li>
                 <li>
-                    <h3>На праздник</h3>
+                    <div class="menu__button">
+                    <button class="main__button main_button--holiday" type="button">На праздник</button>
                     <p>Чем удивить гостей, чтобы все были сыты за праздничным столом</p>
+                    </div>
                 </li>
-                <img src="images/cqfrs2snlalntijeljctjy3kky7mhq3n.jpg" width="200" height="200">
+                <div class="menu__wrap--right">
+                <img src="images/cqfrs2snlalntijeljctjy3kky7mhq3n.jpg" width="150" height="150">
+                </div>
             </ul>
         </section>
         <section class="products">
-                </div>
+                <div>
                 <h2>Описание пончиков</h2>
                 <p>Пончики — это настоящая радость для сладкоежек! Они мягкие, воздушные, с золотистой корочкой, которая при легком нажатии слегка хрустит, открывая доступ к нежной, тающей во рту текстуре. Свежие, только что из печи или фритюра, они источают теплый, сладковатый аромат ванили и сливочного теста, который мгновенно вызывает аппетит.
                     Пончики могут быть покрыты гладкой глянцевой глазурью, которая мягко обволакивает их поверхность, добавляя сладости и мягкого блеска. Шоколадная глазурь — густая и насыщенная, с богатым вкусом какао, в то время как классическая сахарная или ванильная добавляет легкую, приятную сладость. Иногда пончики украшают сахарной пудрой, которая тает на языке, оставляя легкий, воздушный сладкий след.
@@ -127,7 +139,7 @@
         </section>
 
         <section class="products">
-            <span class="header_search">
+            <span class="header__search">
             <h2>Поиск </h2>
             <p>Введите вид пончика, а мы найдем его по тегам!</p>
             <form action="/" method="get">

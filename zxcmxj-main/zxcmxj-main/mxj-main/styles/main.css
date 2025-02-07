@@ -1,0 +1,40 @@
+/*.menu{ 
+    display: flex; 
+    gap: 10px; 
+    } 
+.menu__wrap-right{ 
+    width: 500px; 
+    flex-shrink: 0; 
+  }
+.menu{ 
+    background-color: rgb(243, 240, 193); 
+    color: rgb(230, 0, 255); 
+    padding: 10px; 
+}
+*/
+.menu{
+    width: 350px; 
+    padding: 15px;
+    background-color: rgb(243, 240, 193); 
+    color: black; 
+    box-shadow: 1px 2px 20px 5px rgb(243, 240, 193);
+}
+.main__button{ 
+    display: block; 
+    padding: 10px; 
+    background-color: rgb(255, 187, 0); 
+    color: rgb(0, 0, 0); 
+    text-decoration: none; 
+    text-align: center; 
+}
+.menu{ 
+    margin: 0; 
+    padding: 20px 0; 
+    display: flex; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+    list-style-type: none; 
+} 
+.menu__button{ 
+    margin-top: auto; 
+} 
