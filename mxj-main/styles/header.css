@@ -1,0 +1,341 @@
+body {
+    font-family: 'Triodion', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* ==========================
+     Стили для header
+     ========================== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .header__logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(228, 7, 236);
+  }
+  
+  .header__logo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .header__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header__subtitle {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .header__menu .menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu__item {
+    list-style: none;
+  }
+  
+  .menu__button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Состояние наведения */
+  .menu__button:hover {
+    background-color: #ffa500;
+  }
+  
+  /* Состояние нажатия */
+  .menu__button:active {
+    background-color: #ff8c00;
+    transform: scale(0.95);
+  }
+  
+  /* Состояние кнопки, если она отключена */
+  .menu__button:disabled {
+    background-color: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+  }
+  
+  /* ==========================
+     Кнопка авторизации в header
+     ========================== */
+  .header__auth-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .header__auth-button img {
+    width: 54px;
+    height: 32px;
+  }
+  
+  /* ==========================
+     Стили для модальных окон
+     ========================== */
+  .modal {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .modal--auth,
+  .modal--register {
+    display: none;
+  }
+  
+  .modal__close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal__title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .modal__text {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .modal__actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .modal__button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .modal__button--login {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .modal__button--register {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .modal__button--cancel {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .modal__button--already-have {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header__logo-wrap {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  .header__logo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .header__title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header__menu {
+    display: flex;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+  }
+  
+  .menu__item {
+    list-style: none;
+  }
+  
+  .menu__button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .menu__button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .header__auth-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .header__menu .menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+  }
+  
+  .menu__item {
+    list-style: none;
+  }
+  
+  .menu__button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .menu__button:hover {
+    background-color: var(--primary-hover);
+  }
+  .header__auth-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    background: #ffcc00; 
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+/* --- Анимация появления кнопки --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Иконка внутри кнопки --- */
+.header__auth-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+/* --- Эффект увеличения и свечения при наведении --- */
+.header__auth-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+    background: #ffb700;
+}
+
+/* --- Вращение иконки при наведении --- */
+.header__auth-button:hover .header__auth-icon {
+    transform: rotate(10deg);
+}
+
+/* --- Анимация нажатия (уменьшение) --- */
+.header__auth-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(255, 204, 0, 0.8);
+}
+.header__logo {
+  display: block;
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  animation: fadeInBounce 1s forwards;
+}
+
+@keyframes fadeInBounce {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  50% {
+      opacity: 1;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+

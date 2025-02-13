@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DonutEllo</title>
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <!-- Заголовок -->
+  <header class="header container">
+    <a class="header__logo-wrap" href="index.html">
+      <img class="header__logo" src="images/ponchik.png" width="150" height="150" alt="Логотип DonutEllo">
+    </a>
+    <h1 class="header__title">DonutEllo</h1>
+    <p class="header__subtitle">Вкуснейшие пончики в мире!</p>
+
+    <!-- Меню -->
+    <nav class="header__menu">
+      <ul class="menu">
+        <li class="menu__item"><button class="menu__button" type="button">Главная</button></li>
+        <li class="menu__item"><button class="menu__button" type="button">Пончики</button></li>
+        <li class="menu__item"><button class="menu__button" type="button">Корзина</button></li>
+      </ul>
+    </nav>
+
+    <!-- Кнопка для входа -->
+    <button class="header__auth-button" type="button">
+      <img class="header__auth-icon" src="images/login-icon.png" alt="Войти">
+      <span class="header__auth-text">Войти</span>
+  </button>
+  </header>
+
+  <!-- Модальные окна -->
+<!-- Модальное окно входа -->
+<section id="modalAuth" class="modal hidden">
+  <div class="modal__content">
+    <button id="closeAuthButton" class="modal__close-button" type="button">
+      <img src="images/close-icon.png" alt="Закрыть" width="35" height="35">
+    </button>
+    <h2 class="modal__title">Войдите в профиль</h2>
+    <p class="modal__text">Заказывать доставку могут только зарегистрированные пользователи.</p>
+    <div class="modal__actions">
+      <button class="modal__button modal__button--login" type="button">Войти</button>
+      <button class="modal__button modal__button--register" type="button">Регистрация</button>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Регистрация -->
+  <section class="modal modal--register hidden">
+    <button class="modal__close-button" type="button">
+      <img src="images/close-icon.png" alt="Закрыть окно" width="35" height="35">
+    </button>
+    <h2 class="modal__title">Регистрация</h2>
+    <form class="modal__form" action="#" method="post">
+      <input class="modal__input" type="text" name="name" placeholder="Имя" required>
+      <input class="modal__input" type="email" name="email" placeholder="Логин" required>
+      <fieldset class="modal__fieldset">
+        <div class="modal__password-group">
+          <input class="modal__input" type="password" name="password" placeholder="Пароль" required>
+          <span class="modal__hint">Минимум 8 символов</span>
+        </div>
+        <input class="modal__input" type="password" name="repeat-password" placeholder="Повторите пароль" required>
+      </fieldset>
+      <fieldset class="modal__fieldset">
+        <button class="modal__button modal__button--submit" type="submit">Зарегистрироваться</button>
+        <button class="modal__button modal__button--cancel" type="button">Отмена</button>
+      </fieldset>
+      <button class="modal__button modal__button--already-have" type="button">У меня уже есть аккаунт</button>
+    </form>
+  </section>
+
+  <!-- Основной контент -->
+  <main class="main container">
+    <!-- Первый экран -->
+    <section class="order">
+      <div class="order__content">
+        <h2 class="order__title">Заказывай пончики в 2 клика!</h2>
+        <p class="order__text">Не обязательно приходить в заведение, просто сделай заказ и мы привезём свежие пончики к тебе домой!</p>
+        <div class="order__actions">
+          <button class="order__button order__button--order-now" type="button">Сделать заказ</button>
+          <button class="order__button order__button--login" type="button">Войти</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Сортировка по тегам -->
+    <section class="tags">
+      <h2 class="tags__title">Умная сортировка по тегам</h2>
+      <p class="tags__description">Добавляй в корзину и находи любимые категории.</p>
+      <div class="tags__list">
+          
+          <div class="tags__card">
+              <h3 class="tags__card-title">Собери свой бокс</h3>
+              <p class="tags__card-description">Время приготовления не более 1 часа.</p>
+              <button class="tags__btn" data-modal="modal1">Подробнее</button>
+          </div>
+  
+          <div class="tags__card">
+              <h3 class="tags__card-title">Акции</h3>
+              <p class="tags__card-description">Подходит даже для детей любого возраста.</p>
+              <button class="tags__btn" data-modal="modal2">Подробнее</button>
+          </div>
+  
+          <div class="tags__card">
+              <h3 class="tags__card-title">На праздник</h3>
+              <p class="tags__card-description">Чем удивить гостей за праздничным столом?</p>
+              <button class="tags__btn" data-modal="modal3">Подробнее</button>
+          </div>
+  
+      </div>
+  </section>
+
+    <!-- Поиск -->
+    <section class="search">
+      <h2 class="search__title">Поиск</h2>
+      <p class="search__description">Введите вид пончика, а мы найдем его по тегам!</p>
+      <form class="search__form" action="/" method="get">
+        <input class="search__input" type="search" name="text" placeholder="Введите вид пончика..." required>
+        <input class="search__submit" type="submit" value="Поиск">
+      </form>
+      <ul class="search__tags">
+        <li class="search__tag">С глазурью</li>
+        <li class="search__tag">Топинг внутри</li>
+        <li class="search__tag">Хрустящие</li>
+        <li class="search__tag">Постные</li>
+        <li class="search__tag">И другие...</li>
+      </ul>
+    </section>
+    <section class="products">
+      <h2 class="products__title">Новинки</h2>
+      <div class="products__list">
+        
+        <div class="product-card">
+          <img class="product-card__image" src="images/kisspng-cider-doughnut-donuts-frosting-icing-muffin-5b47f4ceec1ab7.3977501415314423829671.png" alt="Тропический рай">
+          <h3 class="product-card__title">Пончик "Тропический рай"</h3>
+          <p class="product-card__description">Пончики с начинкой из манго и маракуйи, покрытые кокосовой глазурью.</p>
+          <p class="product-card__taste"><strong>Вкус:</strong> Сладость с легкой кислинкой, напоминающей отдых на пляже.</p>
+        </div>
+  
+        <div class="product-card">
+          <img class="product-card__image" src="images/pngtree-matcha-green-tea-donut-png-image_9201292.png" alt="Матча и Юдзу">
+          <h3 class="product-card__title">Пончик "Матча и Юдзу"</h3>
+          <p class="product-card__description">Пончики с японским цитрусом юдзу и глазурью из зеленого чая матча.</p>
+          <p class="product-card__taste"><strong>Вкус:</strong> Легкая горчинка матча в сочетании с цитрусовой кислинкой.</p>
+        </div>
+  
+        <div class="product-card">
+          <img class="product-card__image" src="images/189bc91c45f73abe5f4298d36de52e5c.png" alt="Соленая карамель и бекон">
+          <h3 class="product-card__title">Пончик "Соленая карамель и бекон"</h3>
+          <p class="product-card__description">Пончики с карамельной начинкой и хрустящими кусочками бекона.</p>
+          <p class="product-card__taste"><strong>Вкус:</strong> Идеальное сочетание сладкого и соленого.</p>
+        </div>
+  
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="footer container">
+  </footer>
+
+  <p class="copyright">Данный сайт - собственность Лаврентьева Дмитрия и Бессонова Сергея</p>
+<script src="js/script.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,146 @@
+*,
+::before,
+::after {
+box-sizing: border-box;
+}
+html,
+body {
+font-family:'Comfortoaa', sans-serif;
+font-size: 18px;
+line-height: 30px;
+color: #000000;
+background-color: #ffffff;
+overflow-x: hidden;
+}
+img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+padding: 0;
+white-space: nowrap;
+border: 0;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+.container{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+   }
+  /* Цветовая палитра */
+  :root {
+    --primary-color: #ffcc00;
+    --primary-hover: #ffa500;
+    --primary-active: #ff8c00;
+    --secondary-color: #007bff;
+    --secondary-hover: #0056b3;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --white: #ffffff;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.3;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Кнопки */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .button:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .button:active {
+    background-color: var(--primary-active);
+    transform: scale(0.95);
+  }
+  
+  .button--secondary {
+    background-color: var(--secondary-color);
+    color: var(--white);
+  }
+  
+  .button--secondary:hover {
+    background-color: var(--secondary-hover);
+  }
+  
+  /* Форма */
+  .input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  .input.error {
+    border-color: var(--error-color);
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
+  }
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 300px;
+}
+
+.modal__content {
+  position: relative;
+  padding: 20px;
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal--show {
+  display: block;
+}
