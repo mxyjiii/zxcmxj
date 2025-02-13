@@ -707,3 +707,15 @@
 .product-card__image:hover {
   transform: scale(1.1);
 }
+/* --- Скрываем секцию по умолчанию --- */
+.products {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* --- Когда секция становится видимой --- */
+.products.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
