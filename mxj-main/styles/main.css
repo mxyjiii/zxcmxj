@@ -785,3 +785,136 @@
 .scroll-to-top.visible {
   display: block;
 }
+.products__container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.products__list {
+  display: flex;
+  position: relative;
+  height: 450px;
+}
+
+.product-card {
+  position: absolute;
+  width: 100%;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  filter: blur(3px) brightness(0.7);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.product-card.active {
+  opacity: 1;
+  filter: none;
+  transform: translateX(0) scale(1);
+  z-index: 3;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.product-card.prev {
+  transform: translateX(-80%) scale(0.9);
+}
+
+.product-card.next {
+  transform: translateX(80%) scale(0.9);
+}
+
+.product-card.prev,
+.product-card.next {
+  cursor: pointer;
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.carousel__button--prev {
+  left: -25px;
+}
+
+.carousel__button--next {
+  right: -25px;
+}
+
+.carousel__button:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0;
+  gap: 10px;
+}
+
+.carousel__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel__dot.active {
+  background: #ff6b6b;
+  transform: scale(1.2);
+}
+
+.product-card__image {
+  max-width: 80%;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.product-card.active .product-card__image {
+  transform: scale(1.05);
+}
+
+.product-card__title {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.product-card__description,
+.product-card__taste {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.product-card.active .product-card__title,
+.product-card.active .product-card__description,
+.product-card.active .product-card__taste {
+  color: #333;
+}

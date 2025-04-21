@@ -135,38 +135,49 @@
     </section>
     <section class="products">
       <h2 class="products__title">Новинки</h2>
-      <div class="products__list">
+      <div class="products__container">
+        <button class="carousel__button carousel__button--prev" aria-label="Предыдущий">&lt;</button>
         
-        <div class="product-card">
-          <img class="product-card__image" src="images/kisspng-cider-doughnut-donuts-frosting-icing-muffin-5b47f4ceec1ab7.3977501415314423829671.png" alt="Тропический рай">
-          <h3 class="product-card__title">Пончик "Тропический рай"</h3>
-          <p class="product-card__description">Пончики с начинкой из манго и маракуйи, покрытые кокосовой глазурью.</p>
-          <p class="product-card__taste"><strong>Вкус:</strong> Сладость с легкой кислинкой, напоминающей отдых на пляже.</p>
+        <div class="products__list carousel">
+          <div class="product-card active">
+            <img class="product-card__image" src="images/kisspng-cider-doughnut-donuts-frosting-icing-muffin-5b47f4ceec1ab7.3977501415314423829671.png" alt="Тропический рай">
+            <h3 class="product-card__title">Пончик "Тропический рай"</h3>
+            <p class="product-card__description">Пончики с начинкой из манго и маракуйи, покрытые кокосовой глазурью.</p>
+            <p class="product-card__taste"><strong>Вкус:</strong> Сладость с легкой кислинкой, напоминающей отдых на пляже.</p>
+          </div>
+    
+          <div class="product-card">
+            <img class="product-card__image" src="images/pngtree-matcha-green-tea-donut-png-image_9201292.png" alt="Матча и Юдзу">
+            <h3 class="product-card__title">Пончик "Матча и Юдзу"</h3>
+            <p class="product-card__description">Пончики с японским цитрусом юдзу и глазурью из зеленого чая матча.</p>
+            <p class="product-card__taste"><strong>Вкус:</strong> Легкая горчинка матча в сочетании с цитрусовой кислинкой.</p>
+          </div>
+    
+          <div class="product-card">
+            <img class="product-card__image" src="images/189bc91c45f73abe5f4298d36de52e5c.png" alt="Соленая карамель и бекон">
+            <h3 class="product-card__title">Пончик "Соленая карамель и бекон"</h3>
+            <p class="product-card__description">Пончики с карамельной начинкой и хрустящими кусочками бекона.</p>
+            <p class="product-card__taste"><strong>Вкус:</strong> Идеальное сочетание сладкого и соленого.</p>
+          </div>
         </div>
-  
-        <div class="product-card">
-          <img class="product-card__image" src="images/pngtree-matcha-green-tea-donut-png-image_9201292.png" alt="Матча и Юдзу">
-          <h3 class="product-card__title">Пончик "Матча и Юдзу"</h3>
-          <p class="product-card__description">Пончики с японским цитрусом юдзу и глазурью из зеленого чая матча.</p>
-          <p class="product-card__taste"><strong>Вкус:</strong> Легкая горчинка матча в сочетании с цитрусовой кислинкой.</p>
-        </div>
-  
-        <div class="product-card">
-          <img class="product-card__image" src="images/189bc91c45f73abe5f4298d36de52e5c.png" alt="Соленая карамель и бекон">
-          <h3 class="product-card__title">Пончик "Соленая карамель и бекон"</h3>
-          <p class="product-card__description">Пончики с карамельной начинкой и хрустящими кусочками бекона.</p>
-          <p class="product-card__taste"><strong>Вкус:</strong> Идеальное сочетание сладкого и соленого.</p>
-        </div>
-  
+        
+        <button class="carousel__button carousel__button--next" aria-label="Следующий">&gt;</button>
       </div>
+      <div class="carousel__dots"></div>
     </section>
   </main>
 
-  <!-- Подвал -->
-  <footer class = "footer container">
-    <p>Проект создан командой: <strong>Лаврентьев Дмитрий, Бессонов Сергей</strong></p>
-</footer>
+  <footer class="footer container">
+    <p>Проект создан командой: 
+      <strong> Лаврентьев Дмитрий, Бессонов Сергей </strong>
+    </p>
+  </footer>
 <script src="js/script.js"></script>
+<!-- Прелоадер -->
+<div class="preloader">
+  <div class="preloader__spinner"></div>
+</div>
+
 </body>
 
 
