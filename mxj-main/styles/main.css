@@ -802,6 +802,7 @@
 .product-card {
   position: absolute;
   width: 100%;
+  height: 500px;
   padding: 25px;
   background: #fff;
   border-radius: 15px;
@@ -809,7 +810,6 @@
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
   backface-visibility: hidden;
-  filter: blur(3px) brightness(0.7);
   opacity: 0.5;
   z-index: 1;
 }
@@ -917,4 +917,12 @@
 .product-card.active .product-card__description,
 .product-card.active .product-card__taste {
   color: #333;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  transition-property: transform;
+  display: block
 }

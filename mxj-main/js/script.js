@@ -160,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
       fetch('data.json')
         .then(response => response.json())
         .then(data => {
-          renderProducts(data.products);
           preloader.style.opacity = '0';
           
           setTimeout(() => {
@@ -177,12 +176,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Функция рендеринга товаров
-  function renderProducts(products) {
+  function renderProducts1(products){
     const productsList = document.querySelector('.products__list');
     
-    if (!productsList) return;
+    if (!productsList);
     
-    productsList.innerHTML = '';
+    productsList.innerHTML = '';  
     
     products.forEach(product => {
       const productCard = `
@@ -196,6 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
       productsList.insertAdjacentHTML('beforeend', productCard);
     });
   }
+  /*
   document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.products__list');
     const cards = Array.from(document.querySelectorAll('.product-card'));
@@ -300,3 +300,56 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   });
+  */
+  // Инициализация Swiper
+const initSwiper = () => {
+  const slider = document.querySelector('.swiper');
+  const swiper = new Swiper(slider, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2,
+    //   },
+    //   1024: {
+    //     slidesPerView: 3,
+    //   }
+    // }
+  });
+};
+
+// Генерация карточек
+const renderProducts = (products) => {
+  const swiperWrapper = document.querySelector('.swiper-wrapper');
+  swiperWrapper.innerHTML = products.map(product => `
+    <div class="swiper-slide">
+      <div class="product-card" data-id="${product.id}">
+        <img class="product-card__image" src="${product.image}" alt="${product.title}" loading="lazy">
+        <h3 class="product-card__title">${product.title}</h3>
+        <p class="product-card__description">${product.description}</p>
+        <p class="product-card__taste"><strong>Вкус:</strong> ${product.taste}</p>
+        <button class="product-card__add">В корзину</button>
+      </div>
+    </div>
+  `).join('');
+};
+
+// Запускаем после загрузки данных
+document.addEventListener('DOMContentLoaded', () => {
+
+  renderProducts(productsData); // productsData из твоего кода
+  initSwiper();
+});
+  
+  
+  
+  

@@ -8,6 +8,7 @@
   <title>DonutEllo</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -135,8 +136,8 @@
     </section>
     <section class="products">
       <h2 class="products__title">Новинки</h2>
-      <div class="products__container">
-        <button class="carousel__button carousel__button--prev" aria-label="Предыдущий">&lt;</button>
+      <div class="swiper">
+        <div class="swiper-wrapper">
         
         <div class="products__list carousel">
           <div class="product-card active">
@@ -161,9 +162,10 @@
           </div>
         </div>
         
-        <button class="carousel__button carousel__button--next" aria-label="Следующий">&gt;</button>
       </div>
-      <div class="carousel__dots"></div>
+      <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     </section>
   </main>
 
@@ -172,12 +174,12 @@
       <strong> Лаврентьев Дмитрий, Бессонов Сергей </strong>
     </p>
   </footer>
-<script src="js/script.js"></script>
 <!-- Прелоадер -->
 <div class="preloader">
   <div class="preloader__spinner"></div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js" defer></script> <!-- defer для загрузки после DOM -->
 </body>
 
 
